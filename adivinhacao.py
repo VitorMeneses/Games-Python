@@ -18,6 +18,7 @@ for rodada in range (1, total_de_tentativas + 1):
 
         if(acertou):
             print("Você acertou")
+            break
         else:
             if(maior):
                 print("Você errou! O Seu chute foi maior que o numero secreto. ")
