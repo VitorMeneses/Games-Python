@@ -19,7 +19,8 @@ def jogar_forca():
         exit("Até mais")
 
 
-
+if(__name__ == "__main__"):
+    jogar_forca()
 
 
 
