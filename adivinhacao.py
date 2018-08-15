@@ -13,10 +13,10 @@ inicio = int(input(">>> "))
 print("***********************************************************")
 
 if inicio == 1:
-    print("Birrrrllll, ta sainda da jaula o monstro")
+    print("Iniciando [...]")
     print()
 elif inicio == 2:
-    exit("Arregooooooooooou")
+    exit("Até mais")
 
 numero_secreto = random.randrange(1, 101)
 total_de_tentativas = 0
@@ -81,6 +81,8 @@ for rodada in range (1, total_de_tentativas + 1):
 
 
         rodada = rodada + 1
+
+
 
 print("***********************************************************")
 print("Final de Jogo")
