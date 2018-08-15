@@ -1,8 +1,9 @@
 import random
 
 print("***********************************************************")
-print("Bem Vindo!")
-print("Descubra o número secreto")
+print("***********************************************************")
+print("Bem Vindo!", "                                             ***")
+print("Descubra o número secreto", "                              ***")
 print("***********************************************************")
 
 numero_secreto = random.randrange(1, 101)
@@ -14,16 +15,27 @@ print("Qual o nível de dificuldade?")
 print("(1) Fácil (2) Médio (3) Difícil")
 print("***********************************************************")
 
-nivel =int(input("Defina o nivel: "))
+nivel = int(input("Defina o nivel: "))
 
-if(nivel == 1):
-    total_de_tentativas = 20
-elif(nivel == 2):
-    total_de_tentativas = 10
+
+while(nivel > 3):
+    nivel = int(input("Informe a Dificuldade: (1) Fácil (2) Médio (3) Difícil: "))
+    if (nivel):
+        print("***********************************************************")
+        continue
+
+if nivel == None:
+    total_de_tentativas = 1
 else:
-    total_de_tentativas = 5
+    if(nivel == 1):
+        total_de_tentativas = 20
+    if (nivel == 2):
+        total_de_tentativas = 10
+    elif(nivel == 3):
+        total_de_tentativas = 5
 
 for rodada in range (1, total_de_tentativas + 1):
+        print("***********************************************************")
         print("Tentativa {} de {}".format(rodada, total_de_tentativas))
         chute_strg = input("Digite o seu número entre 1 a 100: ")
         print("***********************************************************")
@@ -31,7 +43,7 @@ for rodada in range (1, total_de_tentativas + 1):
         chute = int(chute_strg)
 
         if (chute < 1 or chute > 100):
-            print("Você deve digitar um número entre um e 100!")
+            print("Você deve digitar um número entre 1 e 100!")
             print("***********************************************************")
             continue
 
