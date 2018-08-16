@@ -2,8 +2,7 @@ def jogar_forca():
 
     print("***********************************************************")
     print("***********************************************************")
-    print("Bem Vindo!", "                                             ***")
-    print("Descubra o número secreto", "                              ***")
+    print("Bem Vindo ao jogo da Forca!", "                                             ***")
     print("***********************************************************")
 
     print ("Deseja iniciar o jogo?")
@@ -18,6 +17,20 @@ def jogar_forca():
     elif inicio == 2:
         exit("Até mais")
 
+    palavra_secreta = "banana"
+
+    enforcou = False
+    acertou = False
+
+    while(not enforcou and not acertou):
+        chute = input("Qual a letra? ")
+
+        print("jogando....")
+
+
+
+
+    print("Fim de Jogo")
 
 if(__name__ == "__main__"):
     jogar_forca()
