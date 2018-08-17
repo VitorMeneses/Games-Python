@@ -1,3 +1,5 @@
+import random
+
 def jogar_forca():
 
     print("***********************************************************")
@@ -17,7 +19,21 @@ def jogar_forca():
     elif inicio == 2:
         exit("Até mais")
 
-    palavra_secreta = "banana".upper()
+
+    arquivo =open("palavras.txt", "r")
+    palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavras))
+    palavra_secreta = palavras[numero].upper()
+
+
     acertos = ["_" for letra in palavra_secreta]
 
 
@@ -50,7 +66,7 @@ def jogar_forca():
     if(acertou):
         print("Você Ganhou!!!")
     else:
-        print("Você perdeu!! :(")
+        print("Você perdeu!! :( e a palavra era {}".format(palavra_secreta))
 
 
 if(__name__ == "__main__"):
