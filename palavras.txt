@@ -36,3 +36,4 @@ Guardanapo
 Cadeira
 Motocicleta
 Professor
+Joaninha
