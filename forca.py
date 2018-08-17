@@ -18,7 +18,8 @@ def jogar_forca():
         exit("Até mais")
 
     palavra_secreta = "banana".upper()
-    acertos = ["_", "_", "_", "_", "_", "_"]
+    acertos = ["_" for letra in palavra_secreta]
+
 
     enforcou = False
     acertou = False
