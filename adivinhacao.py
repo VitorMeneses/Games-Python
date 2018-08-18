@@ -1,92 +1,92 @@
 import random
 
 
-def jogar_adivinhacao():
+def play_divination():
 
 
     print("***********************************************************")
     print("***********************************************************")
-    print("Bem Vindo!", "                                             ***")
-    print("Descubra o número secreto", "                              ***")
+    print("Welcome!", "                                             ***")
+    print("Discover the secret number", "                           ***")
     print("***********************************************************")
 
-    print("Deseja iniciar o jogo?")
-    print("1 (Sim)     2(Não)")
+    print("Do you want to start the game?")
+    print("1 (Yes)     2(No)")
     print("***********************************************************")
-    inicio = int(input(">>> "))
+    start = int(input(">>> "))
     print("***********************************************************")
 
-    if inicio == 1:
-        print("Iniciando [...]")
+    if start == 1:
+        print("Loading [...]")
         print()
-    elif inicio == 2:
-        exit("Até mais")
+    elif start == 2:
+        exit("See You")
 
-    numero_secreto = random.randrange(1, 101)
-    total_de_tentativas = 0
-    pontos = 1000
+    secret_number = random.randrange(1, 101)
+    total_of_attempts = 0
+    points = 1000
 
     print("***********************************************************")
-    print("Qual o nível de dificuldade?")
-    print("(1) Fácil (2) Médio (3) Difícil")
+    print("What is the level of difficulty?")
+    print("(1) Easy (2) Medium (3) Hard")
     print("***********************************************************")
 
-    nivel = int(input("Defina o nivel: "))
+    level = int(input("Set the level: "))
 
-    while (nivel > 3):
-        nivel = int(input("Informe a Dificuldade: (1) Fácil (2) Médio (3) Difícil:    "))
-        if (nivel):
+    while (level > 3):
+        level = int(input("Report the difficulty: (1) Easy (2) Medium (3) Hard:    "))
+        if (level):
             print("***********************************************************")
             continue
 
-    if (nivel == 1):
-        total_de_tentativas = 20
+    if (level == 1):
+        total_of_attempts = 20
     else:
-        if (nivel == 2):
-            total_de_tentativas = 10
-        elif (nivel == 3):
-            total_de_tentativas = 5
+        if (level == 2):
+            total_of_attempts = 10
+        elif (level == 3):
+            total_of_attempts = 5
 
-    for rodada in range(1, total_de_tentativas + 1):
+    for rodada in range(1, total_of_attempts + 1):
         print("***********************************************************")
-        print("Tentativa {} de {}".format(rodada, total_de_tentativas))
-        chute_strg = input("Digite o seu número entre 1 a 100: ")
+        print("Attempts {} of {}".format(rodada, total_of_attempts))
+        kick_strg = input("Enter your number from 1 to 100: ")
         print("***********************************************************")
-        print("Você Digitou: ", chute_strg)
-        if not chute_strg.isdigit():
-            print("Você deveria digitar um valor númerico....")
+        print("You typed: ", kick_strg)
+        if not kick_strg.isdigit():
+            print("You should enter a numerical value....")
             continue
 
-        chute = int(chute_strg)
+        kick = int(kick_strg)
 
-        if (chute < 1 or chute > 100):
-            print("Você deve digitar um número entre 1 e 100!")
+        if (kick < 1 or kick > 100):
+            print("You must enter a number between 1 and 100!!")
             print("***********************************************************")
             continue
 
-        acertou = numero_secreto == chute
-        maior = chute > numero_secreto
-        menor = chute < numero_secreto
+        hit = secret_number == kick
+        bigger = kick > secret_number
+        smaller = kick < secret_number
 
-        if (acertou):
-            print("Você acertou e fez {} pontos!".format(pontos))
+        if (hit):
+            print("You hit and you made {} points!".format(points))
             break
         else:
-            if (maior):
-                print("Você errou! O Seu chute foi maior que o numero secreto. ")
+            if (bigger):
+                print("You missed! You kick was bigger than the secret number. ")
                 print("***********************************************************")
 
-            elif (menor):
-                print("Você errou! O seu chute foi menor do que o numero secreto. ")
+            elif (smaller):
+                print("You missed! You kick was less than the secret number. ")
                 print("***********************************************************")
-                pontos_perdidos = abs(numero_secreto - chute)
-                pontos = pontos - pontos_perdidos
+                lost_points = abs(secret_number - kick)
+                points = points - lost_points
 
         rodada = rodada + 1
 
     print("***********************************************************")
-    print("Final de Jogo")
+    print("The End")
     print("***********************************************************")
 
 if(__name__ == "__main__"):
-    jogar_adivinhacao()
+    play_divination()

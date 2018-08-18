@@ -18,4 +18,4 @@ if (jogo == 1):
     forca.jogar_forca()
 elif (jogo == 2):
     print("iniciando Adivinhação")
-    adivinhacao.jogar_adivinhacao()
+    adivinhacao.play_divination()
