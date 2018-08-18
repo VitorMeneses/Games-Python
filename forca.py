@@ -42,6 +42,7 @@ def jogar_forca():
     erros = 0
 
     print(acertos)
+    print("A palavra tem {} letras".format(len(palavra_secreta)))
 
     while(not enforcou and not acertou):
 

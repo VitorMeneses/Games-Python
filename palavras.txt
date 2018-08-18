@@ -3,9 +3,9 @@ Pastilha
 Ouvir
 Minar
 Camada
-Escuridão
+Escuridao
 Nome
-Compaixão
+Compaixao
 Biblioteca
 Madri
 Malha
@@ -16,7 +16,7 @@ Coco
 Franzir
 Ordenança
 Pólen
-Porão
+Porao
 Usurpar
 Rolamento
 Pessoal
