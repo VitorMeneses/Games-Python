@@ -1,10 +1,11 @@
+#-*- coding: utf-8 -*-
 import random
 
 def jogar_forca():
 
     print("***********************************************************")
     print("***********************************************************")
-    print("Bem Vindo ao jogo da Forca!", "                                             ***")
+    print("Bem Vindo ao jogo da Forca!", "                            ***")
     print("***********************************************************")
 
     print ("Deseja iniciar o jogo?")
