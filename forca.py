@@ -1,4 +1,3 @@
-#-*- coding: utf-8 -*-
 import random
 
 def jogar_forca():
@@ -21,7 +20,7 @@ def jogar_forca():
         exit("Até mais")
 
 
-    arquivo =open("palavras.txt", "r")
+    arquivo = open("palavras.txt", "r", encoding="utf8")
     palavras = []
 
     for linha in arquivo:
