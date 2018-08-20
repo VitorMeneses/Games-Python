@@ -74,9 +74,10 @@ def play_gallows():
         illustration.illustration_skull()
         print("You lost!! :( and the word was {}".format(secret_words))
 
-if(__name__ == "__main__"):
-    play_gallows()
-
 print("***********************************************************")
 print("End")
 print("***********************************************************")
+
+if(__name__ == "__main__"):
+    play_gallows()
+
