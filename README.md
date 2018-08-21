@@ -25,8 +25,9 @@ python games.py
 python3 games.py
 
 
+## Archive Words.txt
 
-
+- File where the secret words are (editable and expandable).
 
 
 ### Project used as part of a new programming language study
